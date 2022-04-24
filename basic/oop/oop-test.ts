@@ -1,4 +1,4 @@
-import { Device, SmartPhone } from "./oop-2-inheritance";
+import { Device, SmartPhone } from "../oop/oop-2-inheritance/oop-2-inheritance";
 
 let new_device = new Device("Macbook Pro 14", "3.3.3");
 new_device.getInfo();

@@ -1,4 +1,4 @@
-import { Device } from "./oop-2-inheritance";
+import {Device} from "../oop-2-inheritance/oop-2-inheritance";
 
 export abstract class TV{
     protected name:string;
