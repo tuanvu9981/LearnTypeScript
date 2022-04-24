@@ -2,9 +2,10 @@
   "name": "rest-api",
   "version": "1.0.0",
   "description": "rest-api with typescript",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --config nodemon.json src/app.ts"
   },
   "author": "Tuan-Vu",
   "license": "ISC",
