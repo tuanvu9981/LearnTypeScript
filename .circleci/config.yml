@@ -7,8 +7,6 @@ jobs:
       - image: "circleci/node@4.7"
     steps:
       - checkout  
-      - node/install-packages:
-          pkg-manager: npm
       - run: npm install typescript
       - run: tsc main.ts && node main.js
 
