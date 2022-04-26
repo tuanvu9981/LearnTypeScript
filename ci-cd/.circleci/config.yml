@@ -1,0 +1,29 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/TestTypeScript_CircleCI
+    docker: 
+      - image: "circleci/node@4.7"
+    steps:
+      - checkout  
+      - node/install-packages:
+          pkg-manager: npm
+      - run: npm install typescript
+      - run: tsc main.ts && node main.js
+
+  test:
+    working_directory: ~/TestTypeScript_CircleCI
+    docker:
+      - image: "circleci/node@4.7"
+    steps:
+      - checkout  
+      - run: tsc main.ts && node main.js
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
